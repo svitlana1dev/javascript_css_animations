@@ -1,0 +1,32 @@
+.list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list .list_card {
+  width: 100px;
+  height: calc(100vh / 5 - 32px);
+  color: #fff;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.list .list_card.list_card--matrix:hover {
+  transform: matrix(2, 1, 1, 0, 2, 0);
+}
+
+.list .list_card.list_card--translate:hover {
+  transform: translate(25%, 0);
+}
+
+.list .list_card.list_card--scale:hover {
+  transform: scale(1.5, 0.5);
+}
+
+.list .list_card.list_card--rotate:hover {
+  transform: rotate(0.65turn);
+}
+
+.list .list_card.list_card--skew:hover {
+  transform: skew(20deg, 10deg);
+}
