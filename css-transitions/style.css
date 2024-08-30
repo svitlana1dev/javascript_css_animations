@@ -1,0 +1,15 @@
+.btn-custom {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    background-color: #1c364c;
+    text-transform: uppercase;
+    transition: all 1s ease-out;
+}
+
+.btn-custom:hover,
+.btn-custom:active {
+    padding-inline: 30px;
+    letter-spacing: 2px;
+    background-color: #1b629e;
+}
