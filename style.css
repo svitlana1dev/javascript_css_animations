@@ -1,0 +1,29 @@
+.image {
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 2s ease-in;
+}
+
+.image--zoom {
+  transform-origin: left top;
+}
+
+.image--zoom:hover {
+  transform: scale(1.5);
+}
+
+.image--spin {
+  transform-origin: 100px 20px;
+}
+
+.image--spin:hover {
+  transform: rotate(1turn);
+}
+
+.image--turn:hover {
+  transform: rotate(200grad);
+}
+
+.image--skew:hover {
+  transform: skew(30deg, 20deg);
+}
