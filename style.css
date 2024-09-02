@@ -1,0 +1,24 @@
+.image-wrap {
+  perspective: 1000px;
+}
+
+.image-wrap--main{
+    z-index: 999;
+}
+
+.image {
+  display: block;
+  transition: transform 1s;
+}
+
+.image--zoom {
+  cursor: zoom-in;
+}
+
+.image--zoom:hover {
+  transform: translateZ(400px);
+}
+
+.image--rotate:hover {
+    transform: rotateX(60deg);
+  }
