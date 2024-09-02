@@ -1,0 +1,36 @@
+body {
+  background: #2b2b2f;
+}
+
+.custom-btn {
+  text-transform: capitalize;
+  background: transparent;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 3px solid #fff;
+  padding: 40px 80px;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.custom-btn:before {
+  content: "YEAH!";
+  color: #fff;
+  background-color: #36f43f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+
+.custom-btn:hover:before {
+  transform: translateY(0);
+}
