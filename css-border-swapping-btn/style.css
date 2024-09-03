@@ -1,0 +1,51 @@
+.custom-btn {
+  text-transform: uppercase;
+  background: transparent;
+  border: transparent;
+  font-size: 22px;
+  font-family: verdana;
+  letter-spacing: 3px;
+  height: 60px;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+  color: #fdc518;
+  position: relative;
+  transition: color 1.5s;
+}
+
+.custom-btn:hover {
+  color: #ff0000;
+}
+
+.custom-btn:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-left: 2px solid #ff0000;
+  border-right: 2px solid #fdc518;
+  transition: all 1s;
+}
+
+.custom-btn:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #ff0000;
+  border-bottom: 2px solid #fdc518;
+  transition: all 1s;
+}
+
+.custom-btn:hover:before {
+  transform: rotateY(180deg);
+}
+
+.custom-btn:hover:after {
+  transform: rotateX(180deg);
+}
