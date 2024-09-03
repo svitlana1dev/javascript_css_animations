@@ -1,0 +1,79 @@
+body {
+  background: #261e31;
+}
+
+.custom-btn {
+  text-transform: uppercase;
+  background: transparent;
+  font-size: 25px;
+  font-family: verdana;
+  color: #f6b93b;
+  letter-spacing: 3px;
+  padding: 25px 50px;
+  position: relative;
+  border: 3px solid #f6b93b;
+  box-shadow: 0 0 10px 0 #000;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.custom-btn:before,
+.custom-btn:after,
+span:before,
+span:after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #f6b93b;
+  z-index: -1;
+  transition: all 0.1s;
+}
+
+.custom-btn:before {
+  top: 100%;
+  left: 0%;
+}
+
+.custom-btn:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.custom-btn:after {
+  top: -100%;
+  right: 0;
+  transition-delay: 0.3s;
+}
+
+.custom-btn:hover:after {
+  top: 0;
+  right: 0;
+}
+
+.custom-btn span:before {
+  top: -100%;
+  left: 25%;
+  transition-delay: 0.1s;
+}
+
+.custom-btn:hover span:before {
+  top: 0;
+  left: 25%;
+}
+
+.custom-btn span:after {
+  bottom: -100%;
+  right: 25%;
+  transition-delay: 0.2s;
+}
+
+.custom-btn:hover span:after {
+  bottom: 0;
+  right: 25%;
+}
+
+.custom-btn:hover {
+  box-shadow: 0 0 10px 0 #ffd57d;
+  color: #261e31;
+}
