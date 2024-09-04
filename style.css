@@ -1,0 +1,44 @@
+.custom-btn {
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  width: 300px;
+  height: 110px;
+  position: relative;
+}
+
+.custom-btn::before,
+.custom-btn::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.custom-btn::before {
+  top: 0;
+  left: 50%;
+  background: #9c38ea;
+  transform: skewX(25deg) translate(0, -10px);
+}
+
+.custom-btn:hover::before {
+  left: 0;
+  transform: skewX(0deg) translate(0, 0);
+}
+
+.custom-btn::after {
+  top: 0;
+  right: 50%;
+  background: #ead238;
+  transform: skewX(25deg) translate(0, 10px);
+}
+
+.custom-btn:hover::after {
+  right: 0;
+  transform: skewX(0deg) translate(0, 0);
+}
