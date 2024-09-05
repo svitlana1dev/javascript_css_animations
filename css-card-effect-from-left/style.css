@@ -1,0 +1,47 @@
+.card {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: all 0.5s;
+  background-color: #021933;
+  transform: translateX(-100%);
+}
+
+.caption h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.caption p {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.card:hover .caption {
+  transform: translateX(0);
+}
+
+.card:hover img {
+  transform: translateX(100%);
+}
