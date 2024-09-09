@@ -1,54 +1,63 @@
-body {
-  background: linear-gradient(45deg, #0082ce, #ffd000);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
 }
 
-h2 {
+section {
   position: relative;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  gap: 15px;
-  color: #fff;
-  font-size: 64px;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 24vw;
   text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1em;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-attachment: fixed;
 }
 
-h2 span {
-  position: relative;
-  font-style: italic;
-  filter: blur(5px);
-  transition: 0.5s;
+section:nth-child(1) h2 {
+  background-image: url(1.jpg);
+  background-size: cover;
+}
+section:nth-child(2) h2 {
+  background-image: url(2.jpg);
+  background-size: cover;
 }
 
-h2 span:hover {
-  filter: blur(0);
-  transition: 0s;
+section:nth-child(3) h2 {
+  background-image: url(3.jpg);
+  background-size: cover;
 }
 
-h2 span:before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 8px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 53px #fff, 47px 53px #fff, 47px 0 #fff;
-  opacity: 0;
+section:nth-child(4) h2 {
+  background-image: url(4.jpg);
+  background-size: cover;
 }
 
-h2 span:after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 60px #fff, 40px 60px #fff, 40px 0 #fff;
-  opacity: 0;
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-h2 span:hover:before,
-h2 span:hover:after {
-  opacity: 1;
+section .content a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  text-decoration: none;
+  color: #000;
+  margin-top: 20px;
+  text-transform: capitalize;
 }
