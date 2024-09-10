@@ -1,54 +1,26 @@
 body {
-  background: linear-gradient(45deg, #0082ce, #ffd000);
+	background-color: #26de81;
 }
 
-h2 {
-  position: relative;
-  display: flex;
-  gap: 15px;
-  color: #fff;
-  font-size: 64px;
-  cursor: pointer;
-  text-transform: uppercase;
+h1 {
+	text-align: center;
+	color: white;
+	font-family: arial;
+	font-size: 90px;
+	line-height: 90px;
+	letter-spacing: 15px;
+	text-shadow: 0 1px 0 #efefef,
+				 0 2px 0 #efefef,
+				 0 3px 0 #efefef,
+				 0 4px 0 #efefef,
+				 0 30px 5px rgba(0,0,0,.1);
+
+	animation: float 3s linear infinite;
+	animation-direction: alternate;
 }
 
-h2 span {
-  position: relative;
-  font-style: italic;
-  filter: blur(5px);
-  transition: 0.5s;
-}
+@keyframes float {
+	from { transform: rotate(5deg); }
 
-h2 span:hover {
-  filter: blur(0);
-  transition: 0s;
-}
-
-h2 span:before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 8px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 53px #fff, 47px 53px #fff, 47px 0 #fff;
-  opacity: 0;
-}
-
-h2 span:after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 60px #fff, 40px 60px #fff, 40px 0 #fff;
-  opacity: 0;
-}
-
-h2 span:hover:before,
-h2 span:hover:after {
-  opacity: 1;
+	to { transform: rotate(-5deg); }
 }
