@@ -1,54 +1,34 @@
-body {
-  background: linear-gradient(45deg, #0082ce, #ffd000);
+.background {
+  height: 100vh;
+  background: url(./images/bg.jpg);
+  background-size: 200%;
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  animation: driving 10s linear infinite;
+  width: 100%;
+  height: 100vh;
 }
 
-h2 {
-  position: relative;
-  display: flex;
-  gap: 15px;
-  color: #fff;
-  font-size: 64px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-h2 span {
-  position: relative;
-  font-style: italic;
-  filter: blur(5px);
-  transition: 0.5s;
-}
-
-h2 span:hover {
-  filter: blur(0);
-  transition: 0s;
-}
-
-h2 span:before {
-  content: "";
+.car {
   position: absolute;
-  width: 2px;
-  height: 8px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 53px #fff, 47px 53px #fff, 47px 0 #fff;
-  opacity: 0;
+  left: 200px;
+  bottom: -80px;
+  width: 40vw;
 }
 
-h2 span:after {
-  content: "";
+.motorbike {
   position: absolute;
-  width: 8px;
-  height: 2px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 60px #fff, 40px 60px #fff, 40px 0 #fff;
-  opacity: 0;
+  right: 200px;
+  bottom: 0;
+  width: 20vw;
 }
 
-h2 span:hover:before,
-h2 span:hover:after {
-  opacity: 1;
+@keyframes driving {
+  from {
+    background-position: bottom left;
+  }
+
+  to {
+    background-position: bottom right;
+  }
 }
