@@ -1,54 +1,30 @@
 body {
-  background: linear-gradient(45deg, #0082ce, #ffd000);
+  background-color: #ea20d9;
 }
 
-h2 {
-  position: relative;
-  display: flex;
-  gap: 15px;
+h1 {
   color: #fff;
-  font-size: 64px;
-  cursor: pointer;
+  font-size: 50px;
+}
+
+span:before {
+  content: "TRANSITIONS";
   text-transform: uppercase;
+  font-family: arial;
+  color: #10e0de;
+  animation: word-switch 5s infinite;
 }
 
-h2 span {
-  position: relative;
-  font-style: italic;
-  filter: blur(5px);
-  transition: 0.5s;
-}
+@keyframes word-switch {
+  0% {
+    content: "transitions";
+  }
 
-h2 span:hover {
-  filter: blur(0);
-  transition: 0s;
-}
+  50% {
+    content: "animations";
+  }
 
-h2 span:before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 8px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 53px #fff, 47px 53px #fff, 47px 0 #fff;
-  opacity: 0;
-}
-
-h2 span:after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 60px #fff, 40px 60px #fff, 40px 0 #fff;
-  opacity: 0;
-}
-
-h2 span:hover:before,
-h2 span:hover:after {
-  opacity: 1;
+  100% {
+    content: "transforms";
+  }
 }
