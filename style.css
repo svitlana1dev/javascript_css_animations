@@ -1,54 +1,12 @@
-body {
-  background: linear-gradient(45deg, #0082ce, #ffd000);
+.banner {
+	height: 100vh;
+	background: url(bg.png);
+	background-position: 0 0;
+	animation: animated-pattern 15s linear infinite;
 }
 
-h2 {
-  position: relative;
-  display: flex;
-  gap: 15px;
-  color: #fff;
-  font-size: 64px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
+@keyframes animated-pattern {
+	from { background-position: 0 0 }
 
-h2 span {
-  position: relative;
-  font-style: italic;
-  filter: blur(5px);
-  transition: 0.5s;
-}
-
-h2 span:hover {
-  filter: blur(0);
-  transition: 0s;
-}
-
-h2 span:before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 8px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 53px #fff, 47px 53px #fff, 47px 0 #fff;
-  opacity: 0;
-}
-
-h2 span:after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 2px;
-  background: #fff;
-  top: 10px;
-  left: 0;
-  box-shadow: 0 60px #fff, 40px 60px #fff, 40px 0 #fff;
-  opacity: 0;
-}
-
-h2 span:hover:before,
-h2 span:hover:after {
-  opacity: 1;
+	to { background-position: 800px 600px; }
 }
