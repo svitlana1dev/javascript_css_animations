@@ -1,67 +1,87 @@
-body {  
-  background-color: #262626;
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
 }
 
 ul {
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
 }
 
 ul li {
-  list-style: none;
-  font-family: "Lato", sans-serif;
-  color: #484848;
-  font-size: 80px;
-  letter-spacing: 15px;
-  animation: lighting 1.4s linear infinite;
+  list-style-type: none;
+  width: 120px;
+  height: 120px;
+  margin: 0 20px;
+  border: 2px solid #0a3d62;
+  border-radius: 50%;
+  transition: all 0.5s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes lighting {
+ul li i {
+  font-size: 48px;
+  color: #0a3d62;
+  transition: 0.5s;
+}
+
+ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a3d62;
+  border-radius: 50%;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+ul li:hover:before {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+ul li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px dashed #2e86de;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+ul li:hover:after {
+  opacity: 1;
+  animation: rotating 10s linear infinite;
+}
+
+@keyframes rotating {
   0% {
-    color: #484848;
-    text-shadow: none;
+    transform: scale(0.92) rotate(0deg);
   }
-
-  90% {
-    color: #484848;
-    text-shadow: none;
-  }
-
   100% {
-    color: #fff900;
-    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+    transform: scale(0.92) rotate(360deg);
   }
 }
 
-ul li:nth-child(1) {
-  animation-delay: 0;
-}
-
-ul li:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-ul li:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-ul li:nth-child(4) {
-  animation-delay: 0.3s;
-}
-
-ul li:nth-child(5) {
-  animation-delay: 0.4s;
-}
-
-ul li:nth-child(6) {
-  animation-delay: 0.5s;
-}
-
-ul li:nth-child(7) {
-  animation-delay: 0.6s;
-}
-
-ul li:nth-child(8) {
-  animation-delay: 0.7s;
+ul li:hover i {
+  color: #fff;
 }
