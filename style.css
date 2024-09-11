@@ -1,4 +1,4 @@
-body {  
+body {
   background-color: #262626;
 }
 
@@ -6,62 +6,47 @@ ul {
   margin: 0;
   padding: 0;
   display: flex;
+  border-bottom: solid 10px #fff;
 }
 
 ul li {
   list-style: none;
-  font-family: "Lato", sans-serif;
-  color: #484848;
-  font-size: 80px;
-  letter-spacing: 15px;
-  animation: lighting 1.4s linear infinite;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  margin: 0 10px;
+  border-radius: 50%;
+  animation: jumping 0.8s linear infinite;
 }
 
-@keyframes lighting {
+@keyframes jumping {
   0% {
-    color: #484848;
-    text-shadow: none;
+    transform: translateY(0);
   }
-
-  90% {
-    color: #484848;
-    text-shadow: none;
+  50% {
+    transform: translateY(-150px);
   }
-
   100% {
-    color: #fff900;
-    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+    transform: translateY(0);
   }
 }
 
 ul li:nth-child(1) {
-  animation-delay: 0;
+  animation-delay: 0.45s;
 }
 
 ul li:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-ul li:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-ul li:nth-child(4) {
-  animation-delay: 0.3s;
-}
-
-ul li:nth-child(5) {
-  animation-delay: 0.4s;
-}
-
-ul li:nth-child(6) {
-  animation-delay: 0.5s;
-}
-
-ul li:nth-child(7) {
   animation-delay: 0.6s;
 }
 
-ul li:nth-child(8) {
-  animation-delay: 0.7s;
+ul li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+ul li:nth-child(4) {
+  animation-delay: 0;
+}
+
+ul li:nth-child(5) {
+  animation-delay: 0.1s;
 }
