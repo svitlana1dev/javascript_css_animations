@@ -1,91 +1,79 @@
 body {
-  background-color: #0b1734;
+  margin: 0;
+  padding: 0;
+  background: #ee5253;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.loading {
-  width: 100px;
-  height: 100px;
+.loader {
+  width: 150px;
+  height: 150px;
   position: relative;
-  animation: animate 1s linear infinite;
-  transform: rotate(45deg);
 }
 
 span {
   position: absolute;
   width: 50px;
   height: 50px;
-  animation: rotate 1s linear infinite;
-}
-
-span:nth-child(1) {
-  top: 0;
-  left: 0;
-  background-color: #fceba7;
+  background-color: #fff;
+  border-radius: 4px;
+  animation: chase 2s linear infinite;
 }
 
 span:nth-child(2) {
-  top: 0;
-  right: 0;
-  background-color: #55ddb9;
+  animation-delay: 0.7s;
 }
 
 span:nth-child(3) {
-  bottom: 0;
-  left: 0;
-  background-color: #fd6c64;
+  animation-delay: 1.4s;
 }
 
-span:nth-child(4) {
-  bottom: 0;
-  right: 0;
-  background-color: #1f78b0;
-}
-
-@keyframes rotate {
+@keyframes chase {
   0% {
-    transform: rotate(0deg);
+    top: 0;
+    left: 0;
   }
 
-  10% {
-    transform: rotate(0deg);
+  12.5% {
+    top: 0;
+    left: 50%;
+  }
+
+  25% {
+    top: 0;
+    left: 50%;
+  }
+
+  37.5% {
+    top: 50%;
+    left: 50%;
   }
 
   50% {
-    transform: rotate(90deg);
+    top: 50%;
+    left: 50%;
   }
 
-  90% {
-    transform: rotate(90deg);
+  62.5% {
+    top: 50%;
+    left: 0;
   }
 
-  100% {
-    transform: rotate(90deg);
-  }
-}
-
-@keyframes animate {
-  0% {
-    width: 100px;
-    height: 100px;
+  75% {
+    top: 50%;
+    left: 0;
   }
 
-  10% {
-    width: 100px;
-    height: 100px;
-  }
-
-  50% {
-    width: 150px;
-    height: 150px;
-  }
-
-  90% {
-    width: 100px;
-    height: 100px;
+  87.5% {
+    top: 0;
+    left: 0;
   }
 
   100% {
-    width: 100px;
-    height: 100px;
+    top: 0;
+    left: 0;
   }
 }
