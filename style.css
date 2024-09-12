@@ -1,91 +1,32 @@
 body {
-  background-color: #0b1734;
+  background-color: #262626;
 }
 
 .loading {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  animation: animate 1s linear infinite;
-  transform: rotate(45deg);
+  width: 300px;
+  height: 3px;
+  background-color: #fff;
+  animation: line 2s infinite alternate;
 }
 
-span {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  animation: rotate 1s linear infinite;
-}
-
-span:nth-child(1) {
-  top: 0;
-  left: 0;
-  background-color: #fceba7;
-}
-
-span:nth-child(2) {
-  top: 0;
-  right: 0;
-  background-color: #55ddb9;
-}
-
-span:nth-child(3) {
-  bottom: 0;
-  left: 0;
-  background-color: #fd6c64;
-}
-
-span:nth-child(4) {
-  bottom: 0;
-  right: 0;
-  background-color: #1f78b0;
-}
-
-@keyframes rotate {
+@keyframes line {
   0% {
-    transform: rotate(0deg);
+    transform: scaleX(0);
+    transform-origin: left;
   }
 
-  10% {
-    transform: rotate(0deg);
+  45% {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
   50% {
-    transform: rotate(90deg);
-  }
-
-  90% {
-    transform: rotate(90deg);
+    transform: scaleX(1);
+    transform-origin: right;
   }
 
   100% {
-    transform: rotate(90deg);
-  }
-}
-
-@keyframes animate {
-  0% {
-    width: 100px;
-    height: 100px;
-  }
-
-  10% {
-    width: 100px;
-    height: 100px;
-  }
-
-  50% {
-    width: 150px;
-    height: 150px;
-  }
-
-  90% {
-    width: 100px;
-    height: 100px;
-  }
-
-  100% {
-    width: 100px;
-    height: 100px;
+    transform: scaleX(0);
+    transform-origin: right;
   }
 }
