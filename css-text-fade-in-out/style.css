@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+body {
+  background: #9a0e0e;
+}
+
+h2 {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 46px;
+  color: #fff;
+  overflow: hidden;
+}
+
+h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 120%;
+  height: 100%;
+  background: #9a0e0e;
+  animation: fading 10s linear infinite;
+}
+
+@keyframes fading {
+  0% {
+    left: -20%;
+  }
+  50% {
+    left: 120%;
+  }
+  100% {
+    left: -20%;
+  }
+}
