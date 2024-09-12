@@ -1,91 +1,111 @@
 body {
-  background-color: #0b1734;
+  background-color: #333;
 }
 
-.loading {
-  width: 100px;
-  height: 100px;
+section {
   position: relative;
-  animation: animate 1s linear infinite;
-  transform: rotate(45deg);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-span {
+.text {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  animation: rotate 1s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 45px;
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  white-space: nowrap;
 }
 
-span:nth-child(1) {
-  top: 0;
-  left: 0;
-  background-color: #fceba7;
+.square {
+  position: absolute;
+  bottom: -100px;
+  background-color: #f2f2f2;
+  animation: boxes 10s infinite ease-in-out;
 }
 
-span:nth-child(2) {
-  top: 0;
-  right: 0;
-  background-color: #55ddb9;
+.square:nth-child(1) {
+  width: 75px;
+  height: 75px;
+  left: 7%;
 }
 
-span:nth-child(3) {
-  bottom: 0;
-  left: 0;
-  background-color: #fd6c64;
+.square:nth-child(2) {
+  width: 65px;
+  height: 65px;
+  left: 15%;
+  animation-delay: 4s;
 }
 
-span:nth-child(4) {
-  bottom: 0;
-  right: 0;
-  background-color: #1f78b0;
+.square:nth-child(3) {
+  width: 82px;
+  height: 82px;
+  left: 45%;
+  animation-delay: 8s;
 }
 
-@keyframes rotate {
+.square:nth-child(4) {
+  width: 70px;
+  height: 70px;
+  left: 55%;
+  animation-delay: 2s;
+}
+
+.square:nth-child(5) {
+  width: 60px;
+  height: 60px;
+  left: 27%;
+  animation-delay: 6s;
+}
+
+.square:nth-child(6) {
+  width: 55px;
+  height: 55px;
+  left: 60%;
+  animation-delay: 4s;
+}
+
+.square:nth-child(7) {
+  width: 90px;
+  height: 90px;
+  left: 85%;
+  animation-delay: 9s;
+}
+
+.square:nth-child(8) {
+  width: 70px;
+  height: 70px;
+  left: 75%;
+  animation-delay: 4s;
+}
+
+.square:nth-child(9) {
+  width: 45px;
+  height: 45px;
+  left: 10%;
+  animation-delay: 7s;
+}
+
+.square:nth-child(10) {
+  width: 55px;
+  height: 55px;
+  left: 60%;
+  animation-delay: 7s;
+}
+
+@keyframes boxes {
   0% {
-    transform: rotate(0deg);
-  }
-
-  10% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(90deg);
-  }
-
-  90% {
-    transform: rotate(90deg);
+    bottom: -100px;
   }
 
   100% {
-    transform: rotate(90deg);
-  }
-}
-
-@keyframes animate {
-  0% {
-    width: 100px;
-    height: 100px;
-  }
-
-  10% {
-    width: 100px;
-    height: 100px;
-  }
-
-  50% {
-    width: 150px;
-    height: 150px;
-  }
-
-  90% {
-    width: 100px;
-    height: 100px;
-  }
-
-  100% {
-    width: 100px;
-    height: 100px;
+    bottom: 100%;
+    transform: rotate(180deg);
+    opacity: 0;
   }
 }
