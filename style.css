@@ -1,91 +1,48 @@
 body {
-  background-color: #0b1734;
+  background-color: #555;
 }
 
-.loading {
-  width: 100px;
-  height: 100px;
+.clip-wrapp {
   position: relative;
-  animation: animate 1s linear infinite;
-  transform: rotate(45deg);
+  width: 800px;
+  height: 500px;
+  background-color: #222;
 }
 
-span {
+.clip {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  animation: rotate 1s linear infinite;
-}
-
-span:nth-child(1) {
   top: 0;
   left: 0;
-  background-color: #fceba7;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
 }
 
-span:nth-child(2) {
-  top: 0;
-  right: 0;
-  background-color: #55ddb9;
+.clip1 {
+  background: url(./images/1.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 17% 0, 49% 100%, 0% 100%);
 }
 
-span:nth-child(3) {
-  bottom: 0;
-  left: 0;
-  background-color: #fd6c64;
+.clip2 {
+  background: url(./images/2.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(13% 0, 81% 0, 59% 100%, 36% 100%);
 }
 
-span:nth-child(4) {
-  bottom: 0;
-  right: 0;
-  background-color: #1f78b0;
+.clip3 {
+  background: url(./images/3.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(79% 0, 100% 0, 100% 100%, 59% 100%);
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  10% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(90deg);
-  }
-
-  90% {
-    transform: rotate(90deg);
-  }
-
-  100% {
-    transform: rotate(90deg);
-  }
+.clip-wrapp:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 }
 
-@keyframes animate {
-  0% {
-    width: 100px;
-    height: 100px;
-  }
-
-  10% {
-    width: 100px;
-    height: 100px;
-  }
-
-  50% {
-    width: 150px;
-    height: 150px;
-  }
-
-  90% {
-    width: 100px;
-    height: 100px;
-  }
-
-  100% {
-    width: 100px;
-    height: 100px;
-  }
+.clip-wrapp .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
