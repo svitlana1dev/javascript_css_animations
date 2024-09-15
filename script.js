@@ -1,6 +1,14 @@
-let card = document.querySelector(".card");
-let toggle = document.querySelector(".toggle");
+let sections = document.querySelectorAll("section");
 
-toggle.addEventListener("click", () => {
-  card.classList.toggle("active");
-});
+window.onscroll = () => {
+  sections.forEach((sec) => {
+    let scrollDistance = window.scrollY;
+    let secDistance = sec.offsetTop;
+
+    if (scrollDistance >= secDistance - 150) {
+      sec.classList.add("show-animate");
+    } else {
+      sec.classList.remove("show-animate");
+    }
+  });
+};
