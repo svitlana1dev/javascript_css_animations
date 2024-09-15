@@ -1,6 +1,14 @@
-let card = document.querySelector(".card");
-let toggle = document.querySelector(".toggle");
+let text = document.querySelector(".text");
 
-toggle.addEventListener("click", () => {
-  card.classList.toggle("active");
-});
+let htmlSpans = text.innerText
+  .split("")
+  .map((letter, i) => {
+    return `<span style= "animation-duration: ${
+      Math.random() * 5
+    }s; filter: hue-rotate(${i * 50}deg">${letter}</span>`;
+  })
+  .join("");
+
+text.innerHTML = htmlSpans;
+
+console.log(htmlSpans);
