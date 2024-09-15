@@ -1,8 +1,7 @@
-let video = document.querySelector(".video");
-let thumbs = document.querySelectorAll("ul li");
+let side1 = document.querySelector(".side1");
+let side2 = document.querySelector(".side2");
 
-thumbs.forEach((thumb, i) => {
-  thumb.addEventListener("click", () => {
-    video.src = `videos/video${i + 1}.mp4`;
-  });
+window.addEventListener("scroll", () => {
+  side1.style.left = -window.scrollY + "px";
+  side2.style.left = window.scrollY + "px";
 });
