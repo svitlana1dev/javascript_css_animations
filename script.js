@@ -1,6 +1,5 @@
-let card = document.querySelector(".card");
-let toggle = document.querySelector(".toggle");
+let pattern = document.querySelector(".bg");
 
-toggle.addEventListener("click", () => {
-  card.classList.toggle("active");
+window.addEventListener("scroll", () => {
+  pattern.style.backgroundPosition = window.scrollY + "px";
 });
