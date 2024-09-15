@@ -2,28 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS expandable card</title>
     <link rel="stylesheet" href="style.css" />
+
+    <title>JS circular navigation menu</title>
   </head>
-
   <body>
-    <div class="card">
-      <div class="content">
-        <div class="contentBx">
-          <h2>paul smith<br /><span>creative developer</span></h2>
-          <div class="imgBx">
-            <img src="img.jpg" />
-          </div>
-          <button>hire me</button>
-        </div>
-      </div>
-
-      <div class="toggle">
-        <span></span>
-      </div>
+    <div class="container">
+      <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
+      <ul class="menu">
+        <li style="--i: 1">
+          <a href="#"><ion-icon name="home-outline"></ion-icon></a>
+        </li>
+        <li style="--i: 2">
+          <a href="#">
+            <ion-icon name="camera-outline"></ion-icon>
+          </a>
+        </li>
+        <li style="--i: 3">
+          <a href="#">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+        </li>
+        <li style="--i: 4">
+          <a href="#">
+            <ion-icon name="airplane-outline"></ion-icon>
+          </a>
+        </li>
+        <li style="--i: 5">
+          <a href="#">
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </li>
+        <li style="--i: 6">
+          <a href="#">
+            <ion-icon name="key-outline"></ion-icon>
+          </a>
+        </li>
+      </ul>
     </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
