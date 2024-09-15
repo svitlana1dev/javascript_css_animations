@@ -1,8 +1,5 @@
-let video = document.querySelector(".video");
-let thumbs = document.querySelectorAll("ul li");
+let navigation = document.querySelector(".navigation");
 
-thumbs.forEach((thumb, i) => {
-  thumb.addEventListener("click", () => {
-    video.src = `videos/video${i + 1}.mp4`;
-  });
+navigation.addEventListener("click", () => {
+  navigation.classList.toggle("active");
 });
