@@ -1,6 +1,8 @@
-let card = document.querySelector(".card");
-let toggle = document.querySelector(".toggle");
+let video = document.querySelector(".video");
+let thumbs = document.querySelectorAll("ul li");
 
-toggle.addEventListener("click", () => {
-  card.classList.toggle("active");
+thumbs.forEach((thumb, i) => {
+  thumb.addEventListener("click", () => {
+    video.src = `videos/video${i + 1}.mp4`;
+  });
 });
